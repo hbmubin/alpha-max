@@ -14,7 +14,21 @@ function getARandomAlphabet() {
   const alphabet = alphabets[index];
   return alphabet;
 }
-function addBackgroundColorById(elementId) {
+function setBackgroundColorById(elementId) {
   const element = document.getElementById(elementId);
-  element.classList.add("text-orange-500");
+  element.classList.add("bg-orange-500");
+}
+function removeBackgroundColorById(elementId) {
+  const element = document.getElementById(elementId);
+  element.classList.remove("bg-orange-500");
+}
+function getTextElementValueById(elementId) {
+  const element = document.getElementById(elementId);
+  const elementValueText = element.innerText;
+  const value = parseInt(elementValueText);
+  return value;
+}
+function setTextElementValueById(elementId, value) {
+  const element = document.getElementById(elementId);
+  element.innerText = value;
 }
